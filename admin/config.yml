@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "en"
+
+collections:
+  - name: "site"
+    label: "সাইটের তথ্য"
+    files:
+      - name: "settings"
+        label: "মূল তথ্য (ঠিকানা, ফোন, পরিসংখ্যান, কমিটি)"
+        file: "site-data.json"
+        fields:
+          - label: "সংগঠনের তথ্য"
+            name: "org"
+            widget: "object"
+            fields:
+              - { label: "প্রতিষ্ঠার সাল", name: "founded_year", widget: "string" }
+              - { label: "ঠিকানা", name: "address", widget: "string" }
+              - { label: "ফোন নম্বর", name: "phone", widget: "string" }
+              - { label: "ইমেইল", name: "email", widget: "string" }
+              - { label: "ফেসবুক পেজ লিংক", name: "facebook", widget: "string" }
+
+          - label: "পরিসংখ্যান (স্ট্যাটস)"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "বছরের পথচলা", name: "years", widget: "string" }
+              - { label: "সক্রিয় সদস্য", name: "members", widget: "string" }
+              - { label: "রক্তদান শিবির", name: "campaigns", widget: "string" }
+              - { label: "উপকারভোগী পরিবার", name: "families", widget: "string" }
+
+          - label: "কমিটি"
+            name: "committee"
+            widget: "object"
+            fields:
+              - label: "কার্যকরী কমিটি"
+                name: "executive"
+                widget: "list"
+                label_singular: "সদস্য"
+                fields:
+                  - { label: "নাম", name: "name", widget: "string" }
+                  - { label: "পদবি", name: "role", widget: "string" }
+              - label: "উপদেষ্টা কমিটি"
+                name: "advisory"
+                widget: "list"
+                label_singular: "সদস্য"
+                fields:
+                  - { label: "নাম", name: "name", widget: "string" }
+                  - { label: "পদবি", name: "role", widget: "string" }
+
+          - label: "ছবিঘর (গ্যালারি)"
+            name: "gallery"
+            widget: "list"
+            label_singular: "ছবি"
+            fields:
+              - { label: "ছবি", name: "image", widget: "image", required: false }
+              - { label: "ক্যাপশন", name: "caption", widget: "string" }
