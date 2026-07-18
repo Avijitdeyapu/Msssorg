@@ -60,3 +60,43 @@ collections:
             fields:
               - { label: "ছবি", name: "image", widget: "image", required: false }
               - { label: "ক্যাপশন", name: "caption", widget: "string" }
+
+          - label: "রক্তদাতা তালিকা"
+            name: "blood_donors"
+            widget: "list"
+            label_singular: "রক্তদাতা"
+            fields:
+              - { label: "নাম", name: "name", widget: "string" }
+              - label: "রক্তের গ্রুপ"
+                name: "blood_group"
+                widget: "select"
+                options: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+              - { label: "ফোন নম্বর", name: "phone", widget: "string" }
+              - { label: "এলাকা", name: "area", widget: "string" }
+
+          - label: "আর্থিক প্রতিবেদন (বছরভিত্তিক)"
+            name: "finance"
+            widget: "list"
+            label_singular: "বছর"
+            fields:
+              - { label: "সাল", name: "year", widget: "string" }
+              - { label: "মোট আয়", name: "income", widget: "string" }
+              - { label: "মোট ব্যয়", name: "expense", widget: "string" }
+              - { label: "সংক্ষিপ্ত বিবরণ", name: "note", widget: "text" }
+
+          - label: "সংবাদ ও আপডেট"
+            name: "news"
+            widget: "list"
+            label_singular: "সংবাদ"
+            fields:
+              - { label: "তারিখ", name: "date", widget: "string" }
+              - { label: "শিরোনাম", name: "title", widget: "string" }
+              - { label: "বিস্তারিত", name: "body", widget: "text" }
+
+          - label: "প্রতিষ্ঠাতার স্মরণে"
+            name: "memorial"
+            widget: "object"
+            fields:
+              - { label: "নাম", name: "name", widget: "string" }
+              - { label: "জন্ম — মৃত্যু সাল", name: "years", widget: "string" }
+              - { label: "জীবনী / স্মৃতিচারণ", name: "bio", widget: "text" }
