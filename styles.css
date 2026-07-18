@@ -518,3 +518,102 @@
   .member.tilt-card:hover .avatar{transform:none;}
   .activity-icon{animation:none;}
 }
+
+/* ================= New sections: dropdown nav, tables, forms, news, memorial ================= */
+
+/* Nav dropdown ("আরও") */
+.nav-dropdown{position:relative;}
+.nav-dropdown > .drop-label{cursor:pointer; user-select:none;}
+.dropdown-menu{
+  position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(6px);
+  background:var(--maroon-dark); border:1px solid rgba(201,162,39,0.25); border-radius:4px;
+  min-width:230px; padding:8px 0; opacity:0; visibility:hidden; transition:all .2s ease;
+  box-shadow:0 20px 40px -14px rgba(0,0,0,0.6);
+}
+.nav-dropdown:hover .dropdown-menu{opacity:1; visibility:visible; transform:translateX(-50%) translateY(0);}
+.dropdown-menu a{display:block; padding:11px 20px; font-size:14.5px; white-space:nowrap; color:var(--text-muted);}
+.dropdown-menu a:hover{background:rgba(201,162,39,0.08); color:var(--gold);}
+@media(max-width:640px){
+  .dropdown-menu{
+    position:static; opacity:1; visibility:visible; transform:none;
+    background:none; border:none; box-shadow:none; padding:0 0 0 14px; min-width:0;
+  }
+  .dropdown-menu a{padding:14px 0; border-bottom:1px solid rgba(201,162,39,0.1);}
+  .nav-dropdown .drop-label{padding:16px 0; border-bottom:1px solid rgba(201,162,39,0.15); display:block; color:var(--text-muted);}
+}
+
+/* Filter bar (blood donor search) */
+.filter-bar{
+  display:flex; gap:14px; flex-wrap:wrap; align-items:flex-end; margin-bottom:36px;
+  background:var(--ivory); border:1px solid var(--ivory-line); border-radius:4px; padding:24px;
+}
+.filter-bar .field{margin:0; flex:1; min-width:160px;}
+.filter-bar select{
+  width:100%; padding:12px 14px; border:1px solid #d9cbb4; border-radius:2px;
+  font-family:'Hind Siliguri',sans-serif; font-size:15px; background:#fff; color:var(--text-dark);
+}
+
+/* Data table (blood donors, finance) */
+.data-table{width:100%; border-collapse:collapse; background:var(--ivory);}
+.data-table th{
+  text-align:right; font-size:13px; letter-spacing:0.05em; text-transform:uppercase;
+  color:var(--marigold); font-weight:600; padding:14px 16px; border-bottom:2px solid var(--gold);
+}
+.data-table td{
+  padding:16px; border-bottom:1px solid var(--ivory-line); font-size:15px; color:var(--text-dark); text-align:right;
+}
+.data-table tr:hover td{background:#f3e9d7;}
+.data-table .empty-row td{text-align:center; color:#9a8878; padding:40px 16px;}
+.badge{
+  display:inline-block; padding:4px 12px; border-radius:50px; font-size:13px; font-weight:600;
+  background:rgba(201,162,39,0.14); color:var(--gold); border:1px solid rgba(201,162,39,0.35);
+}
+.table-wrap{overflow-x:auto; border-radius:4px; box-shadow:0 20px 40px -20px rgba(44,27,36,0.25);}
+
+/* News list */
+.news-list{max-width:760px; margin:0 auto;}
+.news-item{
+  padding:34px 0; border-bottom:1px solid var(--ivory-line);
+}
+.news-item:last-child{border-bottom:none;}
+.news-item .news-date{
+  font-family:'Tiro Bangla',serif; color:var(--marigold); font-size:14.5px; display:block; margin-bottom:10px;
+}
+.news-item h3{font-size:21px; color:var(--maroon-dark); margin-bottom:10px;}
+.news-item p{color:#6b5a62; font-size:15.5px; margin:0;}
+
+/* Memorial page */
+.memorial-hero{
+  display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:center;
+}
+.memorial-photo{
+  width:280px; height:280px; border-radius:50%; margin:0 auto;
+  background:radial-gradient(circle at 34% 30%, #4d2f3c, var(--maroon-dark) 72%);
+  border:3px solid var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Tiro Bangla',serif; font-size:64px; color:var(--gold);
+  box-shadow:0 24px 50px -18px rgba(0,0,0,0.55);
+}
+.memorial-hero h2{font-size:clamp(28px,3.6vw,40px); color:var(--maroon-dark); margin-bottom:6px;}
+.memorial-years{color:var(--marigold); font-family:'Tiro Bangla',serif; font-size:17px; margin-bottom:20px; display:block;}
+.memorial-hero p{color:#5b4a52; font-size:16.5px;}
+@media(max-width:760px){
+  .memorial-hero{grid-template-columns:1fr; text-align:center;}
+}
+
+/* Report / finance summary cards */
+.report-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:20px;}
+.report-card{
+  background:var(--ivory); border:1px solid var(--ivory-line); border-radius:4px; padding:30px;
+}
+.report-card .yr{font-family:'Tiro Bangla',serif; color:var(--gold); font-size:24px; display:block; margin-bottom:14px;}
+.report-card .line{display:flex; justify-content:space-between; font-size:14.5px; color:#6b5a62; padding:6px 0; border-bottom:1px dashed var(--ivory-line);}
+.report-card .line b{color:var(--maroon-dark);}
+@media(max-width:900px){.report-grid{grid-template-columns:1fr;}}
+
+/* Form success message */
+.form-success{
+  display:none; background:rgba(31,75,63,0.12); border:1px solid var(--teal); color:var(--teal);
+  padding:16px 20px; border-radius:4px; font-size:14.5px; margin-top:16px;
+}
+.form-success.show{display:block;}

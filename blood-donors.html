@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>যোগাযোগ | এম. সুমন স্মৃতি সংঘ</title>
-<meta name="description" content="এম. সুমন স্মৃতি সংঘের সাথে যোগাযোগ করুন — ঠিকানা, ফোন নম্বর ও বার্তা পাঠানোর ফর্ম।">
+<title>রক্তদাতা তালিকা | এম. সুমন স্মৃতি সংঘ</title>
+<meta name="description" content="এম. সুমন স্মৃতি সংঘের নিবন্ধিত স্বেচ্ছাসেবী রক্তদাতাদের তালিকা। রক্তের গ্রুপ ও এলাকা দিয়ে খুঁজুন।">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,95 +45,84 @@
 
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">যোগাযোগ</span>
-    <h1>আমাদের সাথে যুক্ত হোন</h1>
-    <p>স্বেচ্ছাসেবক হতে চান, অনুদান পাঠাতে চান, নাকি কোনো প্রশ্ন আছে — আমরা শুনতে প্রস্তুত।</p>
-    <div class="breadcrumb"><a href="index.html">হোম</a><span>/</span>যোগাযোগ</div>
-  </div>
-</section>
-
-<section class="section section-mid">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <span class="eyebrow">যোগাযোগের তথ্য</span>
-      <h2 style="color:var(--text-light);">সরাসরি যোগাযোগ করুন</h2>
-      <p>নিচের যেকোনো মাধ্যমে আমাদের সাথে যোগাযোগ করতে পারেন। সাধারণত ২৪-৪৮ ঘণ্টার মধ্যে সাড়া দেওয়ার চেষ্টা করি।</p>
-      <div class="info-row">
-        <span class="ic">⌂</span>
-        <div><b>ঠিকানা</b><span data-field="org.address">পশ্চিম হাপানিয়া, গৌরনদী উপজেলা, বরিশাল জেলা</span></div>
-      </div>
-      <div class="info-row">
-        <span class="ic">☏</span>
-        <div><b>ফোন</b><span data-field="org.phone">+৮৮০ ১XXX-XXXXXX</span></div>
-      </div>
-      <div class="info-row">
-        <span class="ic">✉</span>
-        <div><b>ইমেইল</b><span data-field="org.email">info@msumansmritisangho.org</span></div>
-      </div>
-      <div class="info-row">
-        <span class="ic">☺</span>
-        <div><b>ফেসবুক পেজ</b><span data-field="org.facebook">facebook.com/msumansmritisangho</span></div>
-      </div>
-    </div>
-
-    <form class="form-panel" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleContactSubmit(event)">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;"><label>এটি খালি রাখুন: <input name="bot-field"></label></p>
-      <h3>একটি বার্তা পাঠান</h3>
-      <div class="field">
-        <label for="fname">নাম</label>
-        <input type="text" id="fname" name="name" placeholder="আপনার পূর্ণ নাম">
-      </div>
-      <div class="field">
-        <label for="fphone">ফোন নম্বর</label>
-        <input type="text" id="fphone" name="phone" placeholder="যোগাযোগের নম্বর">
-      </div>
-      <div class="field">
-        <label for="femail">ইমেইল (ঐচ্ছিক)</label>
-        <input type="email" id="femail" name="email" placeholder="আপনার ইমেইল">
-      </div>
-      <div class="field">
-        <label for="fmsg">বার্তা</label>
-        <textarea id="fmsg" name="message" rows="4" placeholder="আপনার বার্তা লিখুন..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-gold" style="width:100%;">বার্তা পাঠান</button>
-      <div class="form-success" id="contactSuccess">ধন্যবাদ! আপনার বার্তা পৌঁছেছে। শীঘ্রই যোগাযোগ করব।</div>
-    </form>
+    <span class="eyebrow">রক্তদাতা</span>
+    <h1>জরুরি মুহূর্তে রক্তদাতা খুঁজুন</h1>
+    <p>আমাদের সংঘের নিবন্ধিত স্বেচ্ছাসেবী রক্তদাতাদের তালিকা। প্রয়োজনে সরাসরি ফোন করুন।</p>
+    <div class="breadcrumb"><a href="index.html">হোম</a><span>/</span>রক্তদাতা তালিকা</div>
   </div>
 </section>
 
 <section class="section section-ivory">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">অবস্থান</span>
-      <h2>আমাদের খুঁজে পাবেন এখানে</h2>
+    <div class="filter-bar">
+      <div class="field">
+        <label for="searchName">নাম দিয়ে খুঁজুন</label>
+        <input type="text" id="searchName" placeholder="নাম লিখুন...">
+      </div>
+      <div class="field">
+        <label for="filterGroup">রক্তের গ্রুপ</label>
+        <select id="filterGroup">
+          <option value="">সব গ্রুপ</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="searchArea">এলাকা</label>
+        <input type="text" id="searchArea" placeholder="এলাকার নাম...">
+      </div>
     </div>
-    <div class="map-box">
-      এখানে গুগল ম্যাপ এমবেড বসবে — আপনার সংঘের সঠিক ঠিকানা দিলে আমি এখানে সরাসরি ম্যাপ বসিয়ে দেব।
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>নাম</th>
+            <th>রক্তের গ্রুপ</th>
+            <th>ফোন নম্বর</th>
+            <th>এলাকা</th>
+          </tr>
+        </thead>
+        <tbody id="blood-donor-table-body">
+          <tr class="empty-row"><td colspan="4">তালিকা লোড হচ্ছে...</td></tr>
+        </tbody>
+      </table>
     </div>
+
     <div class="note-box">
-      দ্রষ্টব্য: বার্তা ফর্মটি সরাসরি Netlify Forms এর মাধ্যমে কাজ করে — কেউ বার্তা পাঠালে সেটি
-      আপনার Netlify অ্যাকাউন্টের "Forms" ট্যাবে জমা হবে।
+      আপনিও রক্তদাতা হিসেবে নাম যুক্ত করতে চাইলে <a href="volunteer.html" style="color:var(--marigold); font-weight:600;">এখানে ক্লিক করে ফর্ম পূরণ করুন</a>, অথবা এডমিন প্যানেল থেকে সরাসরি যোগ করা যায়।
     </div>
   </div>
 </section>
 
 <script>
-  function handleContactSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(data).toString() })
-      .then(() => {
-        document.getElementById('contactSuccess').classList.add('show');
-        form.reset();
-      })
-      .catch(() => {
-        document.getElementById('contactSuccess').textContent = 'দুঃখিত, কিছু একটা সমস্যা হয়েছে। সরাসরি ফোন করুন।';
-        document.getElementById('contactSuccess').classList.add('show');
-      });
-    return false;
+  function applyBloodFilters() {
+    const nameQ = document.getElementById('searchName').value.trim().toLowerCase();
+    const groupQ = document.getElementById('filterGroup').value;
+    const areaQ = document.getElementById('searchArea').value.trim().toLowerCase();
+    const rows = document.querySelectorAll('#blood-donor-table-body tr');
+    rows.forEach(row => {
+      if (row.classList.contains('empty-row')) return;
+      const name = row.children[0].textContent.toLowerCase();
+      const group = row.getAttribute('data-group') || '';
+      const area = (row.getAttribute('data-area') || '').toLowerCase();
+      const match = (!nameQ || name.includes(nameQ)) &&
+                    (!groupQ || group === groupQ) &&
+                    (!areaQ || area.includes(areaQ));
+      row.style.display = match ? '' : 'none';
+    });
   }
+  window.onBloodDonorsLoaded = function() {
+    document.getElementById('searchName').addEventListener('input', applyBloodFilters);
+    document.getElementById('filterGroup').addEventListener('change', applyBloodFilters);
+    document.getElementById('searchArea').addEventListener('input', applyBloodFilters);
+  };
 </script>
 
 <footer>
@@ -181,4 +170,3 @@
 <script src="data-loader.js"></script>
 
 </body>
-</html>
